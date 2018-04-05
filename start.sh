@@ -1,3 +1,3 @@
 #!/bin/bash
 
-php -S localhost:8080 -t public public/index.php
+php -S 172.30.0.177:8080 -t public public/index.php
