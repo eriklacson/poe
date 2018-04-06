@@ -8,7 +8,7 @@ $app = new \Slim\App;
 
 $app->get('/publish/{signature}', function (Request $request, Response $response, array $args) {
     $signature = $args['signature'];
-    $response->getBody()->write("signature is, $name");
+    $response->getBody()->write("signature is, $signature");
 
     return $response;
 });
