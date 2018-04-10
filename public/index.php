@@ -11,6 +11,17 @@ $app->get('/publish/{signature}', function (Request $request, Response $response
     $response->getBody()->write("signature is, $signature");
 
     return $response;
+
+    //connect to Multichain and publish the signature to the POE stream
+});
+
+$app->get('/verify/{signature}', function (Request $request, Response $response, array $args) {
+    $signature = $args['signature'];
+    $response->getBody()->write("signature is, $signature");
+
+    return $response;
+
+    //connect to Multichain and pull the signature from the POE stream
 });
 
 $app->run();
