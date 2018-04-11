@@ -21,7 +21,7 @@ $app->get('/verify/{signature}', function (Request $request, Response $response,
 
     return $response;
 
-    //connect to Multichain and pull the signature from the POE stream
+    //connect to Multichain and pull the signature from the POE stream and display as JSON
 });
 
 $app->run();
