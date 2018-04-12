@@ -17,9 +17,9 @@ $app->get('/publish/{signature}', function (Request $request, Response $response
     return $response;
 
     //connect to Multichain and publish the signature to the POE stream
-    $client = MultichainClient("http://54.163.128.66:9744", 'multichainrpc', 'G5Z1x53jjUBDdpj8Xoe273Kc5mib72XGXMhhcHtjUSv1', 3);;
-
-});
+    //$client = MultichainClient("http://54.163.128.66:9744", 'multichainrpc', 'G5Z1x53jjUBDdpj8Xoe273Kc5mib72XGXMhhcHtjUSv1', 3);;
+	
+	});
 
 
 $app->get('/verify/{signature}', function (Request $request, Response $response, array $args) {
