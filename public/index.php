@@ -21,7 +21,7 @@ $app->get('/publish/{signature}', function (Request $request, Response $response
     //get blockchain info
     $blockchain_info = $client->setDebug(true)->getInfo();
     
-    return $response->getJSON()->withHeader('Content-type', 'application/json')
+    return $response->getJSON()->withHeader('Content-type', 'application/json');
 	
 	});
 
