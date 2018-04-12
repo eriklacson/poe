@@ -15,7 +15,7 @@ $app->get('/publish/{signature}', function (Request $request, Response $response
     $response->getBody()->write("signature is, $signature");
 
     //connect to Multichain and publish the signature to the POE stream
-    $client = MultichainClient("http://54.163.128.66:9744", 'multichainrpc', 'G5Z1x53jjUBDdpj8Xoe273Kc5mib72XGXMhhcHtjUSv1', 3);
+    $client = new MultichainClient("http://54.163.128.66:9744", 'multichainrpc', 'G5Z1x53jjUBDdpj8Xoe273Kc5mib72XGXMhhcHtjUSv1', 3);
 
     return $response;
 	
