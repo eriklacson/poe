@@ -11,13 +11,17 @@ require 'vendor/autoload.php';
 $app = new \Slim\App;
 
 $app->get('/publish/{signature}', function (Request $request, Response $response, array $args) {
+
     $signature = $args['signature'];
-    $response->getBody()->write("signature is, $signature");
+    //$response->getBody()->write("signature is, $signature");
 
     //connect to Multichain and publish the signature to the POE stream
     $client = new MultichainClient("http://54.163.128.66:9744", 'multichainrpc', 'G5Z1x53jjUBDdpj8Xoe273Kc5mib72XGXMhhcHtjUSv1', 3);
 
-    return $response;
+    //get blockchain info
+    $blockchain_info = $client->setDebug(true)->getInfo();
+    
+    return $response->getJSON()->withHeader('Content-type', 'application/json')
 	
 	});
 
